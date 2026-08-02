@@ -27,9 +27,9 @@
         }
 
         .container {
-            max-width: 960px;
+            max-width: 1380px;
             margin: 0 auto;
-            padding: 48px 20px 64px;
+            padding: 32px 20px 64px;
         }
 
         .card {
@@ -42,7 +42,7 @@
 
         h1 {
             margin: 0 0 8px;
-            font-size: 32px;
+            font-size: 34px;
         }
 
         p {
@@ -50,18 +50,111 @@
             color: var(--muted);
         }
 
-        pre {
+        .section + .section {
+            margin-top: 28px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        h2 {
             margin: 0;
-            padding: 20px;
-            border-radius: 14px;
-            background: #0f172a;
-            color: #e2e8f0;
-            border: 1px solid #1e293b;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-break: break-word;
-            line-height: 1.7;
+            font-size: 22px;
+        }
+
+        .section-header span {
+            color: var(--muted);
             font-size: 14px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 980px;
+            table-layout: fixed;
+            background: #fcfdff;
+        }
+
+        th,
+        td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        th {
+            background: #f2f7ff;
+            color: var(--muted);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        td {
+            word-break: break-word;
+        }
+
+        tbody tr:hover {
+            background: #f8fbff;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        td:nth-child(1) {
+            width: 120px;
+            font-weight: 600;
+        }
+
+        td:nth-child(2) {
+            width: 240px;
+        }
+
+        td:nth-child(3),
+        td:nth-child(4) {
+            width: 120px;
+            white-space: nowrap;
+        }
+
+        td:nth-child(5),
+        td:nth-child(6) {
+            width: 190px;
+            white-space: nowrap;
+        }
+
+        .empty {
+            padding: 24px;
+            border: 1px dashed var(--border);
+            border-radius: 16px;
+            color: var(--muted);
+            background: #fbfdff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 12px 40px;
+            }
+
+            .card {
+                padding: 18px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
@@ -70,25 +163,171 @@
         <div class="card">
             <h1>ETF 筛选结果</h1>
             <p>以下内容由 Python 脚本自动生成。</p>
-            <pre>【宽基ETF】
-SH513180 恒生科技ETF华夏 分类=宽基ETF 规模=2707339000 跌幅=30.48% 高点=2025-09-30@0.8760 当前=2026-07-31@0.6090
-SH513330 恒生互联网ETF华夏 分类=宽基ETF 规模=1826953000 跌幅=35.06% 高点=2025-09-30@0.6190 当前=2026-07-31@0.4020
-SH520500 恒生创新药ETF华泰柏瑞 分类=宽基ETF 规模=909925000 跌幅=36.26% 高点=2025-09-05@2.1150 当前=2026-07-31@1.3480
-SZ159259 成长ETF易方达 分类=宽基ETF 规模=323793400 跌幅=32.92% 高点=2026-06-18@1.7710 当前=2026-07-31@1.1880
-SH588020 科创成长ETF易方达 分类=宽基ETF 规模=252546000 跌幅=35.30% 高点=2026-06-26@1.1376 当前=2026-07-31@0.7360
-SZ159329 沙特ETF南方 分类=宽基ETF 规模=22992840 跌幅=34.18% 高点=2025-01-23@1.3430 当前=2026-07-31@0.8840
-
-【红利ETF】
-SZ159691 港股红利ETF工银 分类=红利ETF 规模=181885000 跌幅=12.25% 高点=2026-03-13@1.3858 当前=2026-07-31@1.2160
-SZ159545 恒生红利低波ETF易方达 分类=红利ETF 规模=73117320 跌幅=10.07% 高点=2026-02-27@1.5023 当前=2026-07-31@1.3510
-SH520990 港股央企红利ETF景顺 分类=红利ETF 规模=51007770 跌幅=10.71% 高点=2026-03-13@1.0975 当前=2026-07-31@0.9800
-
-【行业ETF】
-SZ159792 港股通互联网ETF富国 分类=行业ETF 规模=1796331000 跌幅=41.96% 高点=2025-09-30@1.0700 当前=2026-07-31@0.6210
-SH512690 酒ETF鹏华 分类=行业ETF 规模=783145700 跌幅=46.83% 高点=2023-07-28@0.8520 当前=2026-07-31@0.4530
-SH513770 港股互联网ETF华宝 分类=行业ETF 规模=496034100 跌幅=41.98% 高点=2025-09-30@0.6550 当前=2026-07-31@0.3800
-SZ159206 卫星ETF永赢 分类=行业ETF 规模=328235500 跌幅=41.30% 高点=2026-01-23@2.1310 当前=2026-07-31@1.2510
-SH512200 房地产ETF南方 分类=行业ETF 规模=77780130 跌幅=40.18% 高点=2023-08-04@1.9860 当前=2026-07-31@1.1880</pre>
+            <section class="section">
+                <div class="section-header">
+                    <h2>宽基ETF</h2>
+                    <span>6 只</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>代码</th>
+                                <th>名称</th>
+                                <th>规模</th>
+                                <th>跌幅</th>
+                                <th>高点</th>
+                                <th>当前</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                    <td>SH513180</td>
+                    <td>恒生科技ETF华夏</td>
+                    <td>2707339000</td>
+                    <td>30.48%</td>
+                    <td>2025-09-30@0.8760</td>
+                    <td>2026-07-31@0.6090</td>
+                </tr><tr>
+                    <td>SH513330</td>
+                    <td>恒生互联网ETF华夏</td>
+                    <td>1826953000</td>
+                    <td>35.06%</td>
+                    <td>2025-09-30@0.6190</td>
+                    <td>2026-07-31@0.4020</td>
+                </tr><tr>
+                    <td>SH520500</td>
+                    <td>恒生创新药ETF华泰柏瑞</td>
+                    <td>909925000</td>
+                    <td>36.26%</td>
+                    <td>2025-09-05@2.1150</td>
+                    <td>2026-07-31@1.3480</td>
+                </tr><tr>
+                    <td>SZ159259</td>
+                    <td>成长ETF易方达</td>
+                    <td>323793400</td>
+                    <td>32.92%</td>
+                    <td>2026-06-18@1.7710</td>
+                    <td>2026-07-31@1.1880</td>
+                </tr><tr>
+                    <td>SH588020</td>
+                    <td>科创成长ETF易方达</td>
+                    <td>252546000</td>
+                    <td>35.30%</td>
+                    <td>2026-06-26@1.1376</td>
+                    <td>2026-07-31@0.7360</td>
+                </tr><tr>
+                    <td>SZ159329</td>
+                    <td>沙特ETF南方</td>
+                    <td>22992840</td>
+                    <td>34.18%</td>
+                    <td>2025-01-23@1.3430</td>
+                    <td>2026-07-31@0.8840</td>
+                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section><section class="section">
+                <div class="section-header">
+                    <h2>红利ETF</h2>
+                    <span>3 只</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>代码</th>
+                                <th>名称</th>
+                                <th>规模</th>
+                                <th>跌幅</th>
+                                <th>高点</th>
+                                <th>当前</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                    <td>SZ159691</td>
+                    <td>港股红利ETF工银</td>
+                    <td>181885000</td>
+                    <td>12.25%</td>
+                    <td>2026-03-13@1.3858</td>
+                    <td>2026-07-31@1.2160</td>
+                </tr><tr>
+                    <td>SZ159545</td>
+                    <td>恒生红利低波ETF易方达</td>
+                    <td>73117320</td>
+                    <td>10.07%</td>
+                    <td>2026-02-27@1.5023</td>
+                    <td>2026-07-31@1.3510</td>
+                </tr><tr>
+                    <td>SH520990</td>
+                    <td>港股央企红利ETF景顺</td>
+                    <td>51007770</td>
+                    <td>10.71%</td>
+                    <td>2026-03-13@1.0975</td>
+                    <td>2026-07-31@0.9800</td>
+                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section><section class="section">
+                <div class="section-header">
+                    <h2>行业ETF</h2>
+                    <span>5 只</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>代码</th>
+                                <th>名称</th>
+                                <th>规模</th>
+                                <th>跌幅</th>
+                                <th>高点</th>
+                                <th>当前</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                    <td>SZ159792</td>
+                    <td>港股通互联网ETF富国</td>
+                    <td>1796331000</td>
+                    <td>41.96%</td>
+                    <td>2025-09-30@1.0700</td>
+                    <td>2026-07-31@0.6210</td>
+                </tr><tr>
+                    <td>SH512690</td>
+                    <td>酒ETF鹏华</td>
+                    <td>783145700</td>
+                    <td>46.83%</td>
+                    <td>2023-07-28@0.8520</td>
+                    <td>2026-07-31@0.4530</td>
+                </tr><tr>
+                    <td>SH513770</td>
+                    <td>港股互联网ETF华宝</td>
+                    <td>496034100</td>
+                    <td>41.98%</td>
+                    <td>2025-09-30@0.6550</td>
+                    <td>2026-07-31@0.3800</td>
+                </tr><tr>
+                    <td>SZ159206</td>
+                    <td>卫星ETF永赢</td>
+                    <td>328235500</td>
+                    <td>41.30%</td>
+                    <td>2026-01-23@2.1310</td>
+                    <td>2026-07-31@1.2510</td>
+                </tr><tr>
+                    <td>SH512200</td>
+                    <td>房地产ETF南方</td>
+                    <td>77780130</td>
+                    <td>40.18%</td>
+                    <td>2023-08-04@1.9860</td>
+                    <td>2026-07-31@1.1880</td>
+                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
     </div>
 </body>
